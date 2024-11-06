@@ -1,47 +1,47 @@
-import React, { useState } from 'react';
-import './Contact.css';
+import React, { useState } from "react";
+import "./Contact.css";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
   });
 
   const [errors, setErrors] = useState({});
-  const [submitStatus, setSubmitStatus] = useState('');
+  const [submitStatus, setSubmitStatus] = useState("");
 
   const validateForm = () => {
     const newErrors = {};
     if (!formData.name.trim()) {
-      newErrors.name = 'Name is required';
+      newErrors.name = "Name is required";
     }
     if (!formData.email.trim()) {
-      newErrors.email = 'Email is required';
+      newErrors.email = "Email is required";
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      newErrors.email = 'Email is invalid';
+      newErrors.email = "Email is invalid";
     }
     if (!formData.subject.trim()) {
-      newErrors.subject = 'Subject is required';
+      newErrors.subject = "Subject is required";
     }
     if (!formData.message.trim()) {
-      newErrors.message = 'Message is required';
+      newErrors.message = "Message is required";
     }
     return newErrors;
   };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prevState => ({
+    setFormData((prevState) => ({
       ...prevState,
-      [name]: value
+      [name]: value,
     }));
     // Clear error when user starts typing
     if (errors[name]) {
-      setErrors(prevErrors => ({
+      setErrors((prevErrors) => ({
         ...prevErrors,
-        [name]: ''
+        [name]: "",
       }));
     }
   };
@@ -51,16 +51,16 @@ const Contact = () => {
     const newErrors = validateForm();
     if (Object.keys(newErrors).length === 0) {
       // Here you would typically send the data to a server
-      setSubmitStatus('success');
+      setSubmitStatus("success");
       // Reset form
       setFormData({
-        name: '',
-        email: '',
-        subject: '',
-        message: ''
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
       });
       // Show success message for 3 seconds
-      setTimeout(() => setSubmitStatus(''), 3000);
+      setTimeout(() => setSubmitStatus(""), 3000);
     } else {
       setErrors(newErrors);
     }
@@ -104,9 +104,11 @@ const Contact = () => {
               name="name"
               value={formData.name}
               onChange={handleChange}
-              className={errors.name ? 'error' : ''}
+              className={errors.name ? "error" : ""}
             />
-            {errors.name && <span className="error-message">{errors.name}</span>}
+            {errors.name && (
+              <span className="error-message">{errors.name}</span>
+            )}
           </div>
 
           <div className="form-group">
@@ -117,9 +119,11 @@ const Contact = () => {
               name="email"
               value={formData.email}
               onChange={handleChange}
-              className={errors.email ? 'error' : ''}
+              className={errors.email ? "error" : ""}
             />
-            {errors.email && <span className="error-message">{errors.email}</span>}
+            {errors.email && (
+              <span className="error-message">{errors.email}</span>
+            )}
           </div>
 
           <div className="form-group">
@@ -130,9 +134,11 @@ const Contact = () => {
               name="subject"
               value={formData.subject}
               onChange={handleChange}
-              className={errors.subject ? 'error' : ''}
+              className={errors.subject ? "error" : ""}
             />
-            {errors.subject && <span className="error-message">{errors.subject}</span>}
+            {errors.subject && (
+              <span className="error-message">{errors.subject}</span>
+            )}
           </div>
 
           <div className="form-group">
@@ -143,16 +149,18 @@ const Contact = () => {
               value={formData.message}
               onChange={handleChange}
               rows="5"
-              className={errors.message ? 'error' : ''}
+              className={errors.message ? "error" : ""}
             ></textarea>
-            {errors.message && <span className="error-message">{errors.message}</span>}
+            {errors.message && (
+              <span className="error-message">{errors.message}</span>
+            )}
           </div>
 
           <button type="submit" className="submit-button">
             Send Message
           </button>
 
-          {submitStatus === 'success' && (
+          {submitStatus === "success" && (
             <div className="success-message">
               Thank you for your message! We'll get back to you soon.
             </div>

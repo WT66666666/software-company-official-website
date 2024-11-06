@@ -1,73 +1,80 @@
 :root {
-    --background-primary: #ffffff;
-    --background-secondary: #f8f9fa;
-    --text-primary: #333333;
-    --text-secondary: #666666;
-    --accent-color: #007bff;
-    --border-color: #dddddd;
-    --card-background: #ffffff;
-    --navbar-background: rgba(255, 255, 255, 0.9);
-    --shadow-color: rgba(0, 0, 0, 0.1);
-    --input-background: #ffffff;
-    --heading-color: #333333;
-  }
-  
-  .dark-theme {
-    --background-primary: #1a1a1a;
-    --background-secondary: #2d2d2d;
-    --text-primary: #ffffff;
-    --text-secondary: #e0e0e0;
-    --accent-color: #3a91ff;
-    --border-color: #404040;
-    --card-background: #2d2d2d;
-    --navbar-background: rgba(26, 26, 26, 0.9);
-    --shadow-color: rgba(0, 0, 0, 0.3);
-    --input-background: #1a1a1a;
-    --heading-color: #ffffff;
-  }
-  
-  body {
-    background-color: var(--background-primary);
-    color: var(--text-primary);
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  
-  .navbar {
-    background-color: var(--navbar-background);
-  }
-  
-  .navbar-logo a,
-  .navbar-links a {
-    color: var(--text-primary);
-  }
-  
-  .feature-card,
-  .product-card,
-  .testimonial-card,
-  .contact-form,
-  .contact-info {
-    background-color: var(--card-background);
-    color: var(--text-primary);
-    border-color: var(--border-color);
-    box-shadow: 0 4px 6px var(--shadow-color);
-  }
-  
-  .feature-card p,
-  .product-card p,
-  .testimonial-card p {
-    color: var(--text-secondary);
-  }
-  
-  h1, h2, h3, h4, h5, h6 {
-    color: var(--heading-color);
-  }
-  
-  input, textarea {
-    background-color: var(--input-background);
-    color: var(--text-primary);
-    border-color: var(--border-color);
-  }
-  
-  input:focus, textarea:focus {
-    border-color: var(--accent-color);
-  }
+  --background-primary: #ffffff;
+  --background-secondary: #f8f9fa;
+  --text-primary: #333333;
+  --text-secondary: #666666;
+  --accent-color: #007bff;
+  --border-color: #dddddd;
+  --card-background: #ffffff;
+  --navbar-background: rgba(255, 255, 255, 0.9);
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --input-background: #ffffff;
+  --heading-color: #333333;
+}
+
+.dark-theme {
+  --background-primary: #1a1a1a;
+  --background-secondary: #2d2d2d;
+  --text-primary: #ffffff;
+  --text-secondary: #e0e0e0;
+  --accent-color: #3a91ff;
+  --border-color: #404040;
+  --card-background: #2d2d2d;
+  --navbar-background: rgba(26, 26, 26, 0.9);
+  --shadow-color: rgba(0, 0, 0, 0.3);
+  --input-background: #1a1a1a;
+  --heading-color: #ffffff;
+}
+
+body {
+  background-color: var(--background-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar {
+  background-color: var(--navbar-background);
+}
+
+.navbar-logo a,
+.navbar-links a {
+  color: var(--text-primary);
+}
+
+.feature-card,
+.product-card,
+.testimonial-card,
+.contact-form,
+.contact-info {
+  background-color: var(--card-background);
+  color: var(--text-primary);
+  border-color: var(--border-color);
+  box-shadow: 0 4px 6px var(--shadow-color);
+}
+
+.feature-card p,
+.product-card p,
+.testimonial-card p {
+  color: var(--text-secondary);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--heading-color);
+}
+
+input,
+textarea {
+  background-color: var(--input-background);
+  color: var(--text-primary);
+  border-color: var(--border-color);
+}
+
+input:focus,
+textarea:focus {
+  border-color: var(--accent-color);
+}

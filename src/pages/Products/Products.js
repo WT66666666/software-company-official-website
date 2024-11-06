@@ -1,49 +1,68 @@
-import React from 'react';
-import Carousel from '../../components/Carousel/Carousel';
-import './Products.css';
+import React from "react";
+import Carousel from "../../components/Carousel/Carousel";
+import "./Products.css";
 // Import images
-import cloudImage from '../../assets/images/Cloud.png';
-import securityImage from '../../assets/images/CyberSecurity.png';
-import mobileImage from '../../assets/images/MobileDeveloping.png';
+import cloudImage from "../../assets/images/Cloud.png";
+import securityImage from "../../assets/images/CyberSecurity.png";
+import mobileImage from "../../assets/images/MobileDeveloping.png";
 
 const Products = () => {
   const carouselSlides = [
     {
       image: cloudImage,
-      title: 'Cloud Computing Solutions',
-      description: 'Scalable and secure cloud infrastructure for modern businesses.'
+      title: "Cloud Computing Solutions",
+      description:
+        "Scalable and secure cloud infrastructure for modern businesses.",
     },
     {
       image: securityImage,
-      title: 'Cybersecurity Platform',
-      description: 'Advanced security measures to protect your digital assets.'
+      title: "Cybersecurity Platform",
+      description: "Advanced security measures to protect your digital assets.",
     },
     {
       image: mobileImage,
-      title: 'Mobile Development',
-      description: 'Cross-platform mobile applications for your business needs.'
-    }
+      title: "Mobile Development",
+      description:
+        "Cross-platform mobile applications for your business needs.",
+    },
   ];
 
   const products = [
     {
-      title: 'Cloud Solutions',
-      description: 'Enterprise-grade cloud computing solutions with maximum scalability and security.',
-      features: ['Scalable Infrastructure', '24/7 Support', 'Data Backup', 'Global CDN'],
-      category: 'Enterprise'
+      title: "Cloud Solutions",
+      description:
+        "Enterprise-grade cloud computing solutions with maximum scalability and security.",
+      features: [
+        "Scalable Infrastructure",
+        "24/7 Support",
+        "Data Backup",
+        "Global CDN",
+      ],
+      category: "Enterprise",
     },
     {
-      title: 'Cybersecurity Suite',
-      description: 'Complete security solution for protecting your business from cyber threats.',
-      features: ['Threat Detection', 'Real-time Monitoring', 'Incident Response', 'Security Audits'],
-      category: 'Security'
+      title: "Cybersecurity Suite",
+      description:
+        "Complete security solution for protecting your business from cyber threats.",
+      features: [
+        "Threat Detection",
+        "Real-time Monitoring",
+        "Incident Response",
+        "Security Audits",
+      ],
+      category: "Security",
     },
     {
-      title: 'Mobile Development',
-      description: 'Custom mobile applications for iOS and Android platforms.',
-      features: ['Cross-platform Development', 'UI/UX Design', 'API Integration', 'Analytics'],
-      category: 'Development'
-    }
+      title: "Mobile Development",
+      description: "Custom mobile applications for iOS and Android platforms.",
+      features: [
+        "Cross-platform Development",
+        "UI/UX Design",
+        "API Integration",
+        "Analytics",
+      ],
+      category: "Development",
+    },
   ];
 
   return (
